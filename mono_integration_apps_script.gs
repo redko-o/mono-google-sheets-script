@@ -352,6 +352,7 @@ function getTransactions(account, from, to) {
 
 function makeRequest(account, from, to) {
   // Використовуємо переданий account
+  let account_id = getScriptSecret(account);
   let URL_STRING = `https://api.monobank.ua/personal/statement/${account}/${from}/${to}`;
   let options = {
     'method': 'get',
